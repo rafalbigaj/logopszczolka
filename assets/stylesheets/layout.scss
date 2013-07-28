@@ -1,0 +1,188 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #9dd24c;
+  padding: 0;
+  margin: 0;
+}
+
+table#floater {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  tbody > tr > td {
+    /*vertical-align: middle;
+    text-align: center;*/
+    /*padding: 50px;*/
+    background-image: url(../img/bg.png);
+  }
+}
+
+#main-frame {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  /* clear: both;
+  position: relative; */
+
+  /*border: 2px solid #fe7919;
+  border-radius: 0px;
+  background-color: #458fff;*/
+
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  margin-right: 150px;
+  font-family: Tekton Pro, Calibri, sans;
+  font-size: 28pt;
+  color: #fff799;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#bee {
+  top: 20px;
+  right: 50px;
+  position: absolute;
+  width: 131px;
+  height: 132px;
+  background-image: url(../img/bee.png);
+}
+
+/* navigation */
+
+#navigation {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg.png);
+}
+
+#main-frame.slide-left {
+  /*height: 90%;
+  -webkit-transition: all 0.5s ease-in-out;*/
+}
+
+#main-frame.slide-left #content {
+  -webkit-transform: translate(-900px, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+/* leaves */
+#navigation .leaves {
+  position: absolute;
+}
+
+#leaves-lb {
+  bottom: 0;
+  left: 0;
+  width: 516px;
+  height: 438px;
+  background-image: url(../img/leaves_lb.png);
+}
+
+#leaves-rb {
+  bottom: 0;
+  right: 0;
+  width: 310px;
+  height: 281px;
+  background-image: url(../img/leaves_rb.png);
+}
+
+/* flowers */
+#navigation .flower {
+  position: absolute;
+}
+
+#flower-01 {
+  bottom: 180px;
+  left: 110px;
+  width: 128px;
+  height: 112px;
+  background-image: url(../img/ost_01.png);
+}
+
+#flower-02 {
+  bottom: 250px;
+  left: 25px;
+  width: 120px;
+  height: 105px;
+  background-image: url(../img/ost_02.png);
+}
+
+#flower-03 {
+  bottom: 140px;
+  left: 5px;
+  width: 124px;
+  height: 109px;
+  background-image: url(../img/ost_03.png);
+}
+
+#flower-04 {
+  bottom: 70px;
+  left: 80px;
+  width: 121px;
+  height: 84px;
+  background-image: url(../img/ost_04.png);
+}
+
+#flower-05 {
+  bottom: 350px;
+  left: 20px;
+  width: 100px;
+  height: 99px;
+  background-image: url(../img/ost_05.png);
+}
+
+#flower-06 {
+  bottom: 295px;
+  left: 120px;
+  width: 124px;
+  height: 110px;
+  background-image: url(../img/ost_06.png);
+}
+
+#flower-07 {
+  bottom: 120px;
+  right: 52px;
+  width: 126px;
+  height: 110px;
+  background-image: url(../img/ost_07.png);
+}
+
+/* content */
+
+table#content-table {
+  width: 100%;
+  height: 100%;
+}
+
+table#content-table > tbody > tr > td {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 220px;
+  padding-right: 220px;
+  overflow: hidden;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  border: 2px solid #fe7919;
+  border: 8px solid #4B77B9;
+  border-radius: 20px;
+  border-radius: 0;
+  padding: 30px;
+  padding-bottom: 100px;
+  background-color: #458fff;
+  background-color: #9dd24c;
+  background-color: #ddf7a9;
+  background-color: #DAECB6;
+}
