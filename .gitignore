@@ -16,3 +16,9 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# RubyMine
+.idea
+
+# Assets cache (SASS)
+.sass-cache
