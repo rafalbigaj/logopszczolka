@@ -4,8 +4,9 @@ SITE_DIR=beta.logopszczolka.pl
 ASSETS_DIR=logopszczolka-irl.s3.amazonaws.com
 
 function mirror_site() {
-    rm -rf *.html *.txt theme content 
-    wget -D $SITE_DIR,$ASSETS_DIR -k -H -r -l inf -p -E http://$SITE_DIR
+    rm -rf *.html *.txt theme content
+    wget -D $SITE_DIR,$ASSETS_DIR -k -H -r -l inf -p -R "*_admin.html" -X locomotive -E http://$SITE_DIR
+    find . -type d -empty -delete
     SITE_ID=$(ls $ASSETS_DIR/sites)
     ASSETS_SITE_DIR=$ASSETS_DIR/sites/$SITE_ID
 }
@@ -31,7 +32,7 @@ function rewrite_paths() {
     local HTML_FILES=$SITE_DIR/*.html
     local ASSETS_PATH=\\.\\./$ASSETS_SITE_DIR
 
-    sed -i '' -e "s|$ASSETS_PATH/theme|theme|g" -e "s|$ASSETS_PATH/content_entry[0-9a-z]*|content|g" -e "s|\(src=.*\)%3F|\1?|g" $HTML_FILES
+    sed --in-place -e "s|$ASSETS_PATH/theme|theme|g" -e "s|$ASSETS_PATH/content_entry[0-9a-z]*|content|g" -e "s|\(src=.*\)%3F|\1?|g" $HTML_FILES
 }
 
 function move_site_to_root() {
