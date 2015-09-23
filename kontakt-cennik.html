@@ -26,7 +26,8 @@
   <link href="theme/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css">
   <link href="theme/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css">
   <script src="theme/javascripts/vendor/modernizr-2.6.2.min.js" type="text/javascript" ></script>
-  <script src="theme/javascripts/vendor/jquery-1.9.0.min.js" type="text/javascript" ></script>
+  <script src="theme/javascripts/vendor/jquery-1.11.3.min.js" type="text/javascript" ></script>
+  <script src="theme/javascripts/vendor/bootstrap.js" type="text/javascript" ></script>
   <script src="theme/javascripts/vendor/jquery.mousewheel.js" type="text/javascript" ></script>
   <script src="theme/javascripts/vendor/jquery.mCustomScrollbar.js" type="text/javascript" ></script>
   <script src="theme/javascripts/plugins.js" type="text/javascript" ></script>
@@ -39,33 +40,59 @@
       <td>
         <div id='main-frame'>
           <div id='navigation'>
+            <nav class="navbar navbar-fixed-top navbar-inverse visible-xs">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="kontakt-cennik.html#">Logopeda Pszczółka</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                  <ul class="nav navbar-nav">
+                    <li class="link index"><a href="index.html">O Pszczółce</a></li>
+                  <li id="wady-wymowy-link" class="link first"><a href="wady-wymowy.html">Wady wymowy</a></li>
+<li id="kontakt-cennik-link" class="link active "><a href="kontakt-cennik.html">Kontakt i Cennik</a></li>
+<li id="zaburzenia-komunikacji-jezykowej-link" class="link "><a href="zaburzenia-komunikacji-jezykowej.html">Zaburzenia komunikacji językowej</a></li>
+<li id="nauka-czytania-link" class="link "><a href="nauka-czytania.html">Nauka czytania</a></li>
+<li id="partnerzy-link" class="link "><a href="partnerzy.html">Partnerzy</a></li>
+<li id="dysleksja-link" class="link "><a href="dysleksja.html">Dysleksja</a></li>
+<li id="terapeuci-link" class="link "><a href="terapeuci.html">Terapeuci</a></li>
+<li id="logopeda-radzi-link" class="link last"><a href="logopeda-radzi.html">Logopeda radzi</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </nav>
             <div id='content'>
               
-<h2>Kontakt i cennik</h2>
+<h2>Kontakt</h2>
 <div class="row">
 <div class="col-md-6">
-<p><strong>Gabinet logopedyczny "Pszcz&oacute;łka" w Krakowie</strong></p>
+<p><strong>Pracownicy gabinetu logopedycznego "Pszcz&oacute;łka" w Krakowie</strong></p>
 <p>mgr Maria Bigaj - logopeda - Krak&oacute;w<br /> Tel.: +48 512 237 215</p>
-<p>mgr Justyna Guzik - logopeda - Krak&oacute;w<br /> Tel. +48 692 904 155</p>
+<p>mgr Anna Kostyra - logopeda - Krak&oacute;w<br /> Tel. +48 696 625 680</p>
+<p>mgr Olga Kogut - logopeda - Krak&oacute;w<br /> Tel. +48 660 696 286</p>
 <p>E-mail: <a href="mailto:gabinet@logopszczolka.pl">gabinet@logopszczolka.pl</a></p>
+<p><strong>Gabinet Logopedyczny w Krakowie</strong></p>
+<p>ul. Moniuszki 18/9&nbsp;<br /> 31-523 Krak&oacute;w</p>
+<p>NIP: 736-147-55-96</p>
 </div>
 <div class="col-md-6">
-<p><strong>Gabinet Logopedyczny w Krakowie</strong></p>
-<p>ul. Moniuszki 18/9<br /> 31-523 Krak&oacute;w</p>
-<p>NIP: 736-147-55-96</p>
+<div id="contact-map">
+<div id="google-maps-canvas"><iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Pszcz&oacute;łka.+Gabinet+logopedyczny.+Bigaj+M.,+Stanisława+Moniuszki,+Krak&oacute;w,+Poland&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div>
+</div>
 </div>
 </div>
 <p>&nbsp;</p>
+<h2>Cennik</h2>
+<div class="panel panel-default">
+<div class="panel-body">
 <table class="table table-hover" style="width: 100%;" border="0" cellpadding="0">
 <tbody>
-<tr>
-<td>
-<p><strong>Rodzaj spotkania</strong></p>
-</td>
-<td>
-<p><strong>Cena</strong></p>
-</td>
-</tr>
+<tr><th>Rodzaj spotkania</th><th>Cena</th></tr>
 <tr>
 <td>
 <p>Spotkanie terapeutyczne</p>
@@ -84,10 +111,29 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 <p><strong>Terapia logopedyczna</strong> prowadzona jest w trybie indywidualnym. Regularne spotkanie z <strong>logopedą</strong> trwa godzinę zegarową. Czas trwania diagnozy jest uzależniony od rodzaju zaburzenia i predyspozycji dziecka.</p>
 <p>Każdy <strong>logopeda </strong>prowadzi zajęcia w <strong>gabinecie</strong> <strong>w Krakowie</strong>, istnieje także możliwość dojazdu do miejsca zamieszkania dziecka niepełnosprawnego na terenie miasta<strong> Krak&oacute;w</strong> i jego okolic. Koszt i plan <strong>terapii logopedycznej</strong> ustalany jest w takim przypadku z <strong>logopedą </strong>indywidualnie.</p>
 
+              <div class="spacer"></div>
+              <div class="panel panel-default visible-xs">
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="link index"><a href="index.html">O Pszczółce</a></li>
+                  <li id="wady-wymowy-link" class="link first"><a href="wady-wymowy.html">Wady wymowy</a></li>
+<li id="kontakt-cennik-link" class="link active "><a href="kontakt-cennik.html">Kontakt i Cennik</a></li>
+<li id="zaburzenia-komunikacji-jezykowej-link" class="link "><a href="zaburzenia-komunikacji-jezykowej.html">Zaburzenia komunikacji językowej</a></li>
+<li id="nauka-czytania-link" class="link "><a href="nauka-czytania.html">Nauka czytania</a></li>
+<li id="partnerzy-link" class="link "><a href="partnerzy.html">Partnerzy</a></li>
+<li id="dysleksja-link" class="link "><a href="dysleksja.html">Dysleksja</a></li>
+<li id="terapeuci-link" class="link "><a href="terapeuci.html">Terapeuci</a></li>
+<li id="logopeda-radzi-link" class="link last"><a href="logopeda-radzi.html">Logopeda radzi</a></li>
+                </ul>
+                </div>
+              </div>
             </div>
+          <div class="hidden-xs">
             <h1>
               Gabinet Logopedyczny "Pszczółka"
             </h1>
@@ -123,7 +169,7 @@
             <a class='leave' href='logopeda-radzi.html' id='leave-03'>
               <p>Logopeda radzi</p>
             </a>
-            <a class='leave' href='http://beta.logopszczolka.pl/zadaj-pytanie' id='leave-04'>
+            <a class='leave' href='zadaj-pytanie.html' id='leave-04'>
               <p>Zadaj pytanie</p>
             </a>
             <a class='leave' href='partnerzy.html' id='leave-05'>
@@ -132,10 +178,12 @@
             <div id='caterpillar'></div>
             <div id='ladybug'></div>
           </div>
+          </div>
         </div>
       </td>
     </tr>
   </table>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;extension=.js&amp;output=embed"></script>
   <script>
     bindFlowers();
   </script>
