@@ -5,7 +5,7 @@ ASSETS_DIR=logopszczolka-irl.s3.amazonaws.com
 
 function mirror_site() {
     rm -rf *.html *.txt theme content
-    wget -D $SITE_DIR,$ASSETS_DIR -k -H -r -l inf -p -R "*_admin.html" -X locomotive -E http://$SITE_DIR
+    wget -D $SITE_DIR,$ASSETS_DIR -k -H -r -l inf -p -R "*_admin.html,favicon*,android-chrome-*,apple-touch-icon-*" -X locomotive -E http://$SITE_DIR
     find . -type d -empty -delete
     SITE_ID=$(ls $ASSETS_DIR/sites)
     ASSETS_SITE_DIR=$ASSETS_DIR/sites/$SITE_ID
