@@ -32,7 +32,11 @@ function rewrite_paths() {
     local HTML_FILES=$SITE_DIR/*.html
     local ASSETS_PATH=\\.\\./$ASSETS_SITE_DIR
 
-    sed --in-place -e "s|$ASSETS_PATH/theme|theme|g" -e "s|$ASSETS_PATH/content_entry[0-9a-z]*|content|g" -e "s|\(src=.*\)%3F|\1?|g" $HTML_FILES
+    sed --in-place -e "s|$ASSETS_PATH/theme|theme|g" \
+		   -e "s|$ASSETS_PATH/content_entry[0-9a-z]*|content|g" \
+                   -e "s|\(src=.*\)%3F|\1?|g" \
+                   -e "s|href=\"http://$SITE_DIR|href=\"|g" \
+                   $HTML_FILES
 }
 
 function move_site_to_root() {
@@ -45,3 +49,5 @@ cut_assets_timestamp
 move_assets
 rewrite_paths
 move_site_to_root
+
+git status
