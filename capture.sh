@@ -28,6 +28,10 @@ function move_assets() {
     rm -rf $ASSETS_DIR
 }
 
+function clone_index() {
+    cp $SITE_DIR/index.html $SITE_DIR/gabinet_logopedyczny_pszczola.html
+}
+
 function rewrite_paths() {
     local HTML_FILES=$SITE_DIR/*.html
     local ASSETS_PATH=\\.\\./$ASSETS_SITE_DIR
@@ -36,6 +40,7 @@ function rewrite_paths() {
 		   -e "s|$ASSETS_PATH/content_entry[0-9a-z]*|content|g" \
                    -e "s|\(src=.*\)%3F|\1?|g" \
                    -e "s|href=\"http://$SITE_DIR|href=\"|g" \
+                   -e "s|index.html|gabinet_logopedyczny_pszczola.html|g" \
                    $HTML_FILES
 }
 
@@ -47,6 +52,7 @@ function move_site_to_root() {
 mirror_site
 cut_assets_timestamp
 move_assets
+clone_index
 rewrite_paths
 move_site_to_root
 
